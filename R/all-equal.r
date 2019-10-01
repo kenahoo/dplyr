@@ -43,8 +43,3 @@ all_equal <- function(target, current, ignore_col_order = TRUE,
     attr(res, "comment")
   }
 }
-
-#' @export
-#' @rdname all_equal
-#' @method all.equal tbl_df
-all.equal.tbl_df <- all_equal
