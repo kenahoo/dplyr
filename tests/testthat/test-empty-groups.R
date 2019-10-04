@@ -21,7 +21,7 @@ test_that("filtering and slicing retains labels for zero length groups", {
       g = c(1, NA, NA),
       n = c(2L, 0L, 0L)
     ) %>%
-      group_by(e, f)
+      group_by(e, f, g)
   )
 
   expect_equal(
@@ -32,7 +32,7 @@ test_that("filtering and slicing retains labels for zero length groups", {
       g = c(1, 2, NA),
       n = c(1L, 1L, 0L)
     ) %>%
-      group_by(e, f)
+      group_by(e, f, g)
   )
 })
 

@@ -65,7 +65,7 @@ test_that("empty grouped distinct equivalent to empty ungrouped", {
   df1 <- df %>% distinct() %>% group_by(g)
   df2 <- df %>% group_by(g) %>% distinct()
 
-  expect_equal(df1, df2)
+  expect_equal(df1, df2, ignore_col_order = TRUE)
 })
 
 test_that("distinct gives a warning when selecting an unknown column (#3140)", {
